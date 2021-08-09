@@ -1,10 +1,12 @@
-import { useContext, useEffect, useState } from 'react'
-import { getScale, isSsr } from '../utils'
+import { useCallback, useContext, useEffect, useState } from 'react'
+import { getScale as baseGetScale, isSsr } from '../utils'
 import { RemScalingContext } from '../components/remScalingContext/remScalingContext'
+import { getMinSize } from '../utils/getMinSize'
 
 export const useRemFontSize = () => {
-  const { min, max, base, breakpoints } = useContext(RemScalingContext)
-  const minSize = breakpoints?.[0]?.[0] ?? 0
+  const { min, max, base, breakpoints, fallback } = useContext(RemScalingContext)
+  const getScale = useCallback(() => baseGetScale({ breakpoints, fallback }), [breakpoints, fallback])
+  const minSize = getMinSize(breakpoints)
   const [scale, setScale] = useState(getScale())
 
   useEffect(() => {
@@ -19,7 +21,7 @@ export const useRemFontSize = () => {
         window.removeEventListener('orientationchange', onResize)
       }
     }
-  }, [])
+  }, [getScale])
 
   if (typeof window === 'undefined') {
     return max

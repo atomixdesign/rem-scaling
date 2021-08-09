@@ -1,5 +1,5 @@
+import { iOS } from './isIos'
 import { isSsr } from './isSsr'
-import iOS from 'is-ios'
 
 export const getWindowWidth = () => {
   if (isSsr()) {

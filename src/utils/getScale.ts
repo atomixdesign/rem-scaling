@@ -1,9 +1,9 @@
 import { getWindowWidth } from './getWindowWidth'
-import { getBreakpoint } from './getBreakpoint'
+import { getBreakpoint, GetBreakpointArgs } from './getBreakpoint'
 import { normalise } from './normalise'
 
-export const getScale = () => {
-  const [min, max] = getBreakpoint()
+export const getScale = (context: GetBreakpointArgs) => {
+  const [min, max] = getBreakpoint(context)
   const actual = getWindowWidth()
 
   return normalise(min, max, actual)

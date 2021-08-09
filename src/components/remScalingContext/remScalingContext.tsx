@@ -1,3 +1,4 @@
+import React from 'react'
 import { createContext } from 'react'
 
 export type BreakpointKey = string
@@ -24,3 +25,5 @@ export const RemScalingContext = createContext<RemScalingContextType>({
   },
   fallback: [0, 1600],
 })
+
+export const RemScalingProvider: React.FC<{ options: RemScalingContextType }> = ({ options, children }) => <RemScalingContext.Provider value={options} children={children} />

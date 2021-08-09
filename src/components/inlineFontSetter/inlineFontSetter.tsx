@@ -1,10 +1,12 @@
+import React from 'react'
 import { useContext, useEffect } from 'react'
 import { useRemFontSize } from '../../hooks/useRemFontSize'
 import { RemScalingContext } from '../remScalingContext/remScalingContext'
+import { getMinSize } from '../../utils/getMinSize'
 
 export const InlineFontSetter = () => {
   const { min, max, base, breakpoints } = useContext(RemScalingContext)
-  const minSize = breakpoints?.[0]?.[0] ?? 0
+  const minSize = getMinSize(breakpoints)
   const fontSize = useRemFontSize()
 
   useEffect(() => {
@@ -16,7 +18,7 @@ export const InlineFontSetter = () => {
   }, [fontSize])
 
   return (
-    <>
+    <React.Fragment>
       <style>{`
         html {
           font-size: ${base}px;
@@ -45,6 +47,6 @@ export const InlineFontSetter = () => {
           }
         }
       ` }} />
-    </>
+    </React.Fragment>
   )
 }

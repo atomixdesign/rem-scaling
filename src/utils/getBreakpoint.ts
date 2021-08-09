@@ -1,9 +1,12 @@
-import { BreakpointKey, RemScalingContext } from '../components/remScalingContext/remScalingContext'
-import { useContext } from 'react'
+import {
+  BreakpointKey,
+  RemScalingContextType,
+} from '../components/remScalingContext/remScalingContext'
 import { isSsr } from './isSsr'
 
-export const getBreakpoint = () => {
-  const { breakpoints, fallback } = useContext(RemScalingContext)
+export type GetBreakpointArgs = Pick<RemScalingContextType, 'breakpoints' | 'fallback'>
+
+export const getBreakpoint = ({ breakpoints, fallback }: GetBreakpointArgs) => {
   const keys = Object.keys(breakpoints)
 
   if (isSsr()) {
