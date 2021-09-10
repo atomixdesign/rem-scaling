@@ -13,6 +13,7 @@ export type RemScalingContextType = {
   base: number
   breakpoints: BreakpointMap
   fallback: Breakpoint
+  nonce?: string
 }
 
 export const RemScalingContext = createContext<RemScalingContextType>({

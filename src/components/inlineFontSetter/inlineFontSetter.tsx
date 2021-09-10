@@ -5,7 +5,7 @@ import { RemScalingContext } from '../remScalingContext/remScalingContext'
 import { getMinSize } from '../../utils/getMinSize'
 
 export const InlineFontSetter = () => {
-  const { min, max, base, breakpoints } = useContext(RemScalingContext)
+  const { min, max, base, breakpoints, nonce } = useContext(RemScalingContext)
   const minSize = getMinSize(breakpoints)
   const fontSize = useRemFontSize()
 
@@ -19,12 +19,12 @@ export const InlineFontSetter = () => {
 
   return (
     <React.Fragment>
-      <style>{`
+      <style nonce={nonce}>{`
         html {
           font-size: ${base}px;
         }
       `}</style>
-      <script  dangerouslySetInnerHTML={{ __html: `
+      <script nonce={nonce} dangerouslySetInnerHTML={{ __html: `
         var breakpoints = JSON.parse('${JSON.stringify(breakpoints)}');
         var fontSizes = JSON.parse('${JSON.stringify({ min, max })}')
         var keys = Object.keys(breakpoints)
