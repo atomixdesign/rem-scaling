@@ -1,6 +1,6 @@
 {
   "name": "@atomixdesign/rem-scaling-react",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "> TODO: description",
   "author": "Jack Hillman <jack@atomix.com.au>",
   "homepage": "https://github.com/atomixdesign/rem-scaling#readme",
@@ -32,7 +32,7 @@
     "url": "https://github.com/atomixdesign/rem-scaling/issues"
   },
   "dependencies": {
-    "@atomixdesign/rem-scaling": "^2.0.3"
+    "@atomixdesign/rem-scaling": "^2.1.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.20",
