@@ -5,13 +5,13 @@
   "author": "Jack Hillman <jack@atomix.com.au>",
   "license": "MIT",
   "scripts": {
-    "dev": "lerna exec yarn dev",
-    "build": "lerna exec yarn build",
+    "dev": "lerna run dev --stream --parallel",
+    "build": "lerna run build --stream",
     "clean": "rimraf packages/*/dist"
   },
   "workspaces": {
     "packages": [
-      "packages/**"
+      "packages/*"
     ]
   },
   "devDependencies": {

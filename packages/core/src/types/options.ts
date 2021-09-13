@@ -7,4 +7,5 @@ export type RemScalingOptions = {
   breakpoints: BreakpointMap
   fallback: Breakpoint
   nonce?: string
+  scale?: number
 }
