@@ -16,6 +16,9 @@
     "./dist",
     "./src"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atomixdesign/rem-scaling.git"
@@ -31,5 +34,5 @@
   "devDependencies": {
     "microbundle": "^0.13.3"
   },
-  "gitHead": "9a753ec0a864247d75f3ce12490d92adbd65b9f4"
+  "gitHead": "4c7ce16118651a93da300ceb6e46df9e1a21a0d3"
 }
