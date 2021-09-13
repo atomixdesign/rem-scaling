@@ -1,4 +1,4 @@
-import { BreakpointMap } from '../components/remScalingContext/remScalingContext'
+import { BreakpointMap } from '../types'
 
 export const getMinSize = (breakpoints: BreakpointMap) => {
   return Object.keys(breakpoints).reduce((min, key) => {

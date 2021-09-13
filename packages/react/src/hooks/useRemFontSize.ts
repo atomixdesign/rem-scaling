@@ -1,7 +1,6 @@
 import { useCallback, useContext, useEffect, useState } from 'react'
-import { getScale as baseGetScale, isSsr } from '../utils'
-import { RemScalingContext } from '../components/remScalingContext/remScalingContext'
-import { getMinSize } from '../utils/getMinSize'
+import { getScale as baseGetScale, isSsr, getMinSize } from '@atomixdesign/rem-scaling'
+import { RemScalingContext } from '../components'
 
 export const useRemFontSize = () => {
   const { min, max, base, breakpoints, fallback } = useContext(RemScalingContext)

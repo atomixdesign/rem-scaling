@@ -1,0 +1,42 @@
+{
+  "name": "@atomixdesign/rem-scaling-react",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "Jack Hillman <jack@atomix.com.au>",
+  "homepage": "https://github.com/atomixdesign/rem-scaling#readme",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "type": "module",
+  "exports": "./dist/index.modern.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.esm.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist",
+    "./src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomixdesign/rem-scaling.git"
+  },
+  "scripts": {
+    "build": "microbundle --jsx React.createElement --jsxFragment React.Fragment",
+    "dev": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/atomixdesign/rem-scaling/issues"
+  },
+  "dependencies": {
+    "@atomixdesign/rem-scaling": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.20",
+    "microbundle": "^0.13.3"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

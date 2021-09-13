@@ -1,8 +1,8 @@
 import React from 'react'
 import { useContext, useEffect } from 'react'
-import { useRemFontSize } from '../../hooks/useRemFontSize'
+import { useRemFontSize } from '../../hooks'
 import { RemScalingContext } from '../remScalingContext/remScalingContext'
-import { getMinSize } from '../../utils/getMinSize'
+import { getMinSize } from '@atomixdesign/rem-scaling'
 
 export const InlineFontSetter = () => {
   const { min, max, base, breakpoints, nonce } = useContext(RemScalingContext)
