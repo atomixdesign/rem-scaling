@@ -1,10 +1,10 @@
 {
   "name": "@atomixdesign/rem-scaling-demo",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "dependencies": {
-    "@atomixdesign/rem-scaling": "^2.1.0",
-    "@atomixdesign/rem-scaling-react": "^2.1.0",
+    "@atomixdesign/rem-scaling": "^2.1.1",
+    "@atomixdesign/rem-scaling-react": "^2.1.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
